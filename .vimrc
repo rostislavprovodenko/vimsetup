@@ -19,6 +19,10 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0 
 
+" disable syntastic checkers
+let g:syntastic_html_checkers=['']
+let g:syntastic_check_on_open = 0
+
 " auto reload vim on vimrc change
 augroup reload_vimrc " {
     autocmd!
@@ -26,8 +30,8 @@ augroup reload_vimrc " {
 augroup END " }
 
 " custom key mappings
-map <C-R> :TsuRenameSymbol
-
+nmap <C-K> :CtrlPBuffer<CR>
+nmap <C-F><C-F> :NERDTreeFind<CR>
 " auto open NERDTree
 autocmd vimenter * NERDTree
 
@@ -42,3 +46,7 @@ set shiftwidth=4
 set expandtab
 
 set number
+" remove trailing whitespace on :w
+autocmd BufWritePre * %s/\s\+$//e 
+" ctrlp config
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']

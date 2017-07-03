@@ -80,3 +80,6 @@ y: yank (selection)
 y2w: yarnk 2 words
 
 Auto complete commands: : -> start writing a command -> c-d, tab
+
+Search for something inside files:
+:vimgrep /blabla/ **/*

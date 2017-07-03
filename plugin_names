@@ -1,0 +1,8 @@
+- pathogen
+- ctrlp
+- syntastic
+- typescript-vim
+- vim-sensible
+- vim-fugutive
+- tsuquyomi
+- nerdtree

@@ -1,3 +1,4 @@
+cp .vimrc ~/
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 cd ~/.vim
@@ -19,4 +20,4 @@ popd
 
 git clone https://github.com/Quramy/tsuquyomi.git ~/.vim/bundle/tsuquyomi
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
-vim -u NONE -c "Helptags" -c q
+vim -u NONE -c "helptags ALL" -c q

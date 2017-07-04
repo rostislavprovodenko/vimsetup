@@ -22,7 +22,7 @@ to redo: ctrl + r
 
 moving:
 w: moves 1 word forward (stopping at the beggining of the next word
-4w: moves 4 words forward 
+4w: moves 4 words forward
 e: moves forward in the way that it stops at the next end of a word (current or next)
 5e: moves forward 5 words
 0: moves to the beginning of the line
@@ -55,7 +55,7 @@ or ignore case once: /bla\c
 
 put cursor over a bracket and press %: will jump to the matching bracket
 
-search and replace: 
+search and replace:
 
 :%s/searchitem/replaceitem/g - globally
 :#,#%s/bla/bla/g - between lines
@@ -82,4 +82,5 @@ y2w: yarnk 2 words
 Auto complete commands: : -> start writing a command -> c-d, tab
 
 Search for something inside files:
-:vimgrep /blabla/ **/*
+:vim getAllPaged **/* | cw
+

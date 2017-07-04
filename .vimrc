@@ -17,7 +17,7 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0 
+let g:syntastic_check_on_wq = 0
 
 " disable syntastic checkers
 let g:syntastic_html_checkers=['']
@@ -32,11 +32,14 @@ augroup END " }
 " custom key mappings
 nmap <C-K> :CtrlPBuffer<CR>
 nmap <C-F><C-F> :NERDTreeFind<CR>
+map <C-n> :NERDTreeToggle<CR>
 " auto open NERDTree
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 
 " status line customizations
+set statusline+=%{fugitive#statusline()}
 set statusline+=%F
+set statusline+=\ [line\ %l\/%L]
 
 " show existing tab with 4 spaces width
 set tabstop=4
@@ -47,6 +50,6 @@ set expandtab
 
 set number
 " remove trailing whitespace on :w
-autocmd BufWritePre * %s/\s\+$//e 
+autocmd BufWritePre * %s/\s\+$//e
 " ctrlp config
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
